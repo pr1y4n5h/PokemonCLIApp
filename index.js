@@ -13,6 +13,8 @@ function game(ques,ans){
     score = score - 10;
   }
   console.log("Your current score is ",score)
+  console.log("****************************************************************************")
+  console.log("****************************************************************************")
 }
 
 console.log(chalk.redBright.bold("\t\t\t\tWelcome to Pokemon game! Gotta catch 'em all!\t\t\t\t"));
@@ -22,7 +24,10 @@ console.log(chalk.cyan.bold("We will ask you few questions and will provide you 
 var name = readLineSync.question("Please enter your name first - ");
 console.log(chalk.green.bold("Hi "+name.toUpperCase()+"!"));
 var ready = readLineSync.question("So, are you ready "+name.toUpperCase()+"? Please reply with y/n  ")
-if(ready==="y"){
+
+var y = "y"
+
+if(ready.toUpperCase()===y.toUpperCase()){
 console.log("****************************************************************************")
 console.log(chalk.green.bold("Let's start the game "+name));
 
@@ -69,3 +74,4 @@ console.log("*******************************************************************
 else{
   console.log("Thanks for playing!")
 }
+
